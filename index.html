@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-      <section class="section-about">
+      <!-- <section class="section-about">
         <p class="subheading">About us</p>
         <h2>About the company</h2>
         <p class="supporting-text">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section-team">
         <div class="heading-content">
@@ -49,15 +49,62 @@
           </div>
           <div class="actions">
             <button id="btn-about-us" class="btn-secondary">About us</button>
-            <button id="btn-open-positions" class="btn-primary">
-              Open positions
+            <button id="btn-add-teammate" class="btn-primary">
+              Add Teammate
             </button>
           </div>
         </div>
+        <form id="form-add-teammate">
+          <label for="avatar" class="base-field">
+            <span> Avatar <span class="required">*</span></span>
+            <input
+              id="avatar"
+              type="text"
+              name="avatar"
+              required
+              placeholder="Enter avatar URL"
+            />
+          </label>
+          <label for="name" class="base-field">
+            <span> Name <span class="required">*</span></span>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter name"
+              required
+            />
+          </label>
+          <label for="position" class="base-field">
+            <span> Position <span class="required">*</span></span>
+            <input
+              id="position"
+              type="text"
+              name="position"
+              placeholder="Enter position"
+              required
+            />
+          </label>
+          <label for="description" class="base-field">
+            <span>Description <span class="required">*</span></span>
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Enter description"
+              required
+            ></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Add</button>
+            <button type="reset" id="btn-reset" class="btn-secondary">
+              Reset
+            </button>
+          </div>
+        </form>
         <div class="team-cards">
           <div class="team-card">
             <img
-              src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+              src="https://static-00.iconduck.com/assets.00/user-icon-512x512-r62xmy4p.png"
               alt=""
               width="96"
               height="96"

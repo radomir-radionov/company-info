@@ -39,13 +39,38 @@ body {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
+label {
+  font-size: 14px;
+  line-height: 20px;
+  color: #414651;
+}
+
+input {
+  outline: none;
+  padding: 10px 14px;
+  border: 1px solid #d5d7da;
+  border-radius: 0.5rem; /* 8px */
+}
+
+textarea {
+  outline: none;
+  padding: 10px 14px;
+  border: 1px solid #d5d7da;
+  border-radius: 0.5rem; /* 8px */
+}
+
 .section-about {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--spacing-section);
 
-  & > .subheading {
+  > .subheading {
     font-size: var(--font-size-subheading);
     line-height: var(--line-height-subheading);
     letter-spacing: 0.0625rem; /* 1px */
@@ -107,7 +132,10 @@ body {
 
   & > .heading-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
 
     .subheading {
       font-size: var(--font-size-subheading);
@@ -130,6 +158,71 @@ body {
       color: var(--color-text);
     }
   }
+
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    width: 280px;
+    padding: 1.5rem;
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-btn);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s;
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      color: var(--color-heading);
+      margin: 0;
+    }
+
+    .text-role {
+      font-size: 1rem;
+      color: var(--color-primary-dark);
+      margin: 0;
+    }
+
+    .supporting-text {
+      font-size: 0.95rem;
+      color: var(--color-text);
+      margin: 0;
+    }
+  }
+}
+
+#form-add-teammate {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 480px;
+
+  .base-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 /* buttons */
@@ -146,6 +239,10 @@ body {
   border-radius: var(--radius-btn);
   background-color: var(--color-bg-white);
   color: var(--color-btn-secondary);
+}
+
+.required {
+  color: #7f56d9;
 }
 
 @media (max-width: 1200px) {
