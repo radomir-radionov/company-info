@@ -30,10 +30,15 @@ formAddTeammateEl.addEventListener("submit", (event) => {
   let formData = new FormData(formAddTeammateEl);
   let teammate = Object.fromEntries(formData);
 
+  const placeholder =
+    "https://ui-avatars.com/api/?name=" +
+    encodeURIComponent(teammate.name || "User");
+
   const card = document.createElement("div");
   card.className = "team-card";
   card.innerHTML = `
-    <img src="${teammate.avatar}" alt="" width="96" height="96" />
+    <img src="${teammate.avatar}" alt="" width="96" height="96"
+      onerror="this.onerror=null;this.src='${placeholder}';" />
     <h5>${teammate.name}</h5>
     <p class="text-role">${teammate.position}</p>
     <p class="supporting-text">${teammate.description}</p>
