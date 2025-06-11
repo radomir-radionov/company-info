@@ -1,13 +1,35 @@
-let formAddTeammateEl = document.querySelector("#form-add-teammate");
-let teamCardsEl = document.querySelector(".team-cards");
+const btnAddTeammate = document.getElementById("btn-add-teammate");
+const modal = document.getElementById("modal-add-teammate");
+const btnCloseModal = document.getElementById("btn-close-modal");
+const formAddTeammateEl = document.getElementById("form-add-teammate");
+const teamCardsEl = document.querySelector(".team-cards");
 
+// Show modal
+btnAddTeammate.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+// Hide modal
+btnCloseModal.addEventListener("click", () => {
+  modal.style.display = "none";
+  formAddTeammateEl.reset();
+});
+
+// Hide modal when clicking outside the form
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    formAddTeammateEl.reset();
+  }
+});
+
+// Add card logic
 formAddTeammateEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
   let formData = new FormData(formAddTeammateEl);
   let teammate = Object.fromEntries(formData);
 
-  // Create card element
   const card = document.createElement("div");
   card.className = "team-card";
   card.innerHTML = `
@@ -19,5 +41,6 @@ formAddTeammateEl.addEventListener("submit", (event) => {
   `;
 
   teamCardsEl.appendChild(card);
+  modal.style.display = "none";
   formAddTeammateEl.reset();
 });
