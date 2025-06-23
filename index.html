@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header with Cart -->
+    <header
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fafafa;
+        border-bottom: 1px solid #eee;
+      "
+    >
+      <h1 style="font-size: 1.5rem; color: #6941c6">Company Team</h1>
+      <div
+        id="favorites-cart"
+        style="display: flex; align-items: center; gap: 1rem"
+      >
+        <span style="font-weight: 500">Favorites:</span>
+        <span
+          id="favorites-count"
+          style="
+            background: #7f56d9;
+            color: #fff;
+            border-radius: 1rem;
+            padding: 0.25rem 0.75rem;
+          "
+          >0</span
+        >
+      </div>
+    </header>
     <main>
       <!-- <section class="section-about">
         <p class="subheading">About us</p>

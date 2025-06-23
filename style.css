@@ -289,3 +289,20 @@ textarea {
 @media (max-width: 480px) {
   /* mobile phones */
 }
+
+.team-card.skeleton {
+  animation: pulse 1.5s infinite;
+  pointer-events: none;
+  opacity: 0.8;
+}
+@keyframes pulse {
+  0% {
+    background-color: #f3f3f3;
+  }
+  50% {
+    background-color: #ececec;
+  }
+  100% {
+    background-color: #f3f3f3;
+  }
+}
