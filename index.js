@@ -28,6 +28,50 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+// Validation functions
+function validateName() {
+  const name = form.querySelector("#name").value.trim();
+  const errorDiv = form.querySelector("#name-error");
+  errorDiv.textContent = !name && isSignUp ? errorDiv.dataset.error : "";
+}
+
+function validateEmail() {
+  const email = form.querySelector("#email").value.trim();
+  const errorDiv = form.querySelector("#email-error");
+  const valid = /^\S+@\S+\.\S+$/.test(email);
+  errorDiv.textContent = !email || !valid ? errorDiv.dataset.error : "";
+}
+
+function validatePassword() {
+  const password = form.querySelector("#password").value;
+  const errorDiv = form.querySelector("#password-error");
+  if (isSignUp) {
+    errorDiv.textContent =
+      !password || password.length < 6 ? errorDiv.dataset.error : "";
+  } else {
+    errorDiv.textContent = !password ? errorDiv.dataset.error : "";
+  }
+}
+
+function validateConfirmPassword() {
+  const password = form.querySelector("#password").value;
+  const confirmPassword = form.querySelector("#confirm-password").value;
+  const errorDiv = form.querySelector("#confirm-password-error");
+  errorDiv.textContent =
+    isSignUp && password !== confirmPassword ? errorDiv.dataset.error : "";
+}
+
+// Attach input listeners
+form.querySelector("#name").addEventListener("input", validateName);
+form.querySelector("#email").addEventListener("input", validateEmail);
+form.querySelector("#password").addEventListener("input", () => {
+  validatePassword();
+  validateConfirmPassword();
+});
+form
+  .querySelector("#confirm-password")
+  .addEventListener("input", validateConfirmPassword);
+
 // Optional: handle form submit differently for sign up/sign in
 form.addEventListener("submit", function (e) {
   e.preventDefault();
