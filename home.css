@@ -1,69 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-:root {
-  --color-primary: #6941c6;
-  --color-primary-dark: #7f56d9;
-  --color-bg-light: #fafafa;
-  --color-bg-white: #ffffff;
-  --color-heading: #181d27;
-  --color-text: #535862;
-  --color-border: #d5d7da;
-  --color-btn-secondary: #414651;
-
-  --font-family-main: "Inter", sans-serif;
-  --font-size-h2: 3rem; /* 48px */
-  --font-size-h2-team: 2.25rem; /* 36px */
-  --font-size-subheading: 1rem; /* 16px */
-  --font-size-supporting: 1.25rem; /* 20px */
-
-  --line-height-h2: 3.75rem; /* 60px */
-  --line-height-h2-team: 2.75rem; /* 44px */
-  --line-height-subheading: 1.5rem; /* 24px */
-  --line-height-supporting: 1.875rem; /* 30px */
-
-  --spacing-section: 6rem 0; /* 96px 0 */
-  --spacing-gap-large: 4rem; /* 64px */
-  --spacing-btn: 0.75rem 1.125rem; /* 12px 18px */
-  --radius-btn: 0.5rem; /* 8px */
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family-main);
-}
-
-html,
-body {
-  height: 100%;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-}
-
-label {
-  font-size: 14px;
-  line-height: 20px;
-  color: #414651;
-}
-
-input {
-  outline: none;
-  padding: 10px 14px;
-  border: 1px solid #d5d7da;
-  border-radius: 0.5rem; /* 8px */
-}
-
-textarea {
-  outline: none;
-  padding: 10px 14px;
-  border: 1px solid #d5d7da;
-  border-radius: 0.5rem; /* 8px */
-}
-
 .section-about {
   display: flex;
   flex-direction: column;
@@ -206,45 +140,6 @@ textarea {
   }
 }
 
-#form-add-teammate {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 480px;
-
-  .base-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .form-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-
-/* buttons */
-.btn-primary {
-  padding: var(--spacing-btn);
-  border-radius: var(--radius-btn);
-  background-color: var(--color-primary-dark);
-  color: var(--color-bg-white);
-}
-
-.btn-secondary {
-  padding: var(--spacing-btn);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-btn);
-  background-color: var(--color-bg-white);
-  color: var(--color-btn-secondary);
-}
-
-.required {
-  color: #7f56d9;
-}
-
 /* Modal background */
 .modal {
   display: none; /* Hidden by default */
@@ -256,19 +151,6 @@ textarea {
   background: rgba(0, 0, 0, 0.3);
   align-items: center;
   justify-content: center;
-}
-
-/* Modal content */
-.modal-content {
-  background: var(--color-bg-white);
-  padding: 2rem;
-  border-radius: var(--radius-btn);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
-  min-width: 320px;
-  max-width: 90vw;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 @media (max-width: 1200px) {

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!-- Header with Cart -->
+    <header
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fafafa;
+        border-bottom: 1px solid #eee;
+      "
+    >
+      <h1 style="font-size: 1.5rem; color: #6941c6">Company Team</h1>
+      <div
+        id="favorites-cart"
+        style="display: flex; align-items: center; gap: 1rem"
+      >
+        <span style="font-weight: 500">Favorites:</span>
+        <span
+          id="favorites-count"
+          style="
+            background: #7f56d9;
+            color: #fff;
+            border-radius: 1rem;
+            padding: 0.25rem 0.75rem;
+          "
+          >0</span
+        >
+      </div>
+    </header>
+    <main>
+      <!-- <section class="section-about">
+        <p class="subheading">About us</p>
+        <h2>About the company</h2>
+        <p class="supporting-text">
+          Learn more about the company and the team behind it.
+        </p>
+      </section>
+      <section class="section-metrics">
+        <div class="content">
+          <img
+            src="https://images.unsplash.com/photo-1660513924321-d9142645a41d?q=80&w=3221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            width="592"
+            height="560"
+          />
+          <div class="heading-and-supporting-text">
+            <p>Build better, launch faster</p>
+            <h2>We’re only just getting started on our journey</h2>
+            <div class="cards-metrics">
+              <article class="card-metric">400+</article>
+              <article class="card-metric">600%</article>
+              <article class="card-metric">10k</article>
+              <article class="card-metric">200+</article>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section-team">
+        <div class="heading-content">
+          <div class="heading-text">
+            <p class="subheading">We’re hiring!</p>
+            <h2>Meet our team</h2>
+            <p class="supporting-text">
+              Our philosophy is simple — hire a team of diverse, passionate
+              people and foster a culture that empowers you to do your best
+              work.
+            </p>
+          </div>
+          <div class="actions">
+            <button id="btn-add-teammate" class="btn-primary">
+              Add Teammate
+            </button>
+          </div>
+        </div>
+        <div class="team-cards"></div>
+      </section>
+    </main>
+    <!-- Modal for Add Teammate -->
+    <div id="modal-add-teammate" class="modal">
+      <form id="form-add-teammate" class="modal-content">
+        <label for="avatar" class="base-field">
+          <span>Avatar URL <span class="required">*</span></span>
+          <input
+            id="avatar"
+            name="avatar"
+            type="url"
+            required
+            placeholder="Enter avatar URL"
+          />
+        </label>
+        <label for="name" class="base-field">
+          <span>Name <span class="required">*</span></span>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder="Enter name"
+          />
+        </label>
+        <label for="position" class="base-field">
+          <span>Position <span class="required">*</span></span>
+          <input
+            id="position"
+            name="position"
+            type="text"
+            required
+            placeholder="Enter position"
+          />
+        </label>
+        <label for="description" class="base-field">
+          <span>Description <span class="required">*</span></span>
+          <textarea
+            id="description"
+            name="description"
+            required
+            placeholder="Enter description"
+          ></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Add</button>
+          <button type="button" id="btn-close-modal" class="btn-secondary">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>
